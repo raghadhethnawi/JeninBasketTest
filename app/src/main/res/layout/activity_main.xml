@@ -23,6 +23,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:elevation="6dp"
         android:text="Skip"
         android:background="@drawable/skip_button"
         android:textColor="@color/colorGrey"
@@ -41,22 +42,80 @@
         app:srcCompat="@drawable/logo" />
 
     <LinearLayout
+        android:id="@+id/linear1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/linear_corners"
+        android:elevation="16dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linear2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="center"
-            app:srcCompat="@drawable/email" />
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/phone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Continue with Phone"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
     </LinearLayout>
-    
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/linear_corners"
+        android:elevation="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/email" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Continue with Email"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="By continuing, you agree to our Terms of Service, Privacy Policy, Content Policy"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linear2"
+        app:layout_constraintStart_toStartOf="@+id/linear2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
